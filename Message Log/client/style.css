@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+*{
+	box-sizing: border-box;
+    background-color: rgb(253, 246, 236);
+}
+
+#main_background {
+    height: 97.3%;
+    width: 55.7%;
+    position: absolute;
+}
+
+input {  
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#user_input {
+    width: 27.7%;
+    font-size: 30px;
+    position: absolute;
+    top: 416px;
+    left: 925px;
+}
+
+.button {
+    width: 100px;
+    margin-top: 20px;  
+    background-color: #732926;
+    color: #eccf4d;
+    position: absolute;
+    top: 399px;
+    left: 1360px;
+}
+
+#inventory {
+    width: 123px;
+    top: 639px;
+    left: 1348px;
+    background-color: #732926;
+    color: #eccf4d;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
+.right {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 30px;
+    right: -5em;
+}
+
+#main_character {
+    width: 150px;
+    position: absolute;
+    right: 225px;
+    top: 527px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#mc_dialogue_box {
+    width: 14%;
+    height: 20%;
+    position: absolute;
+    bottom: 70px;
+    right: 389px;
+}
+
+#mc_dialogue {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 23px;
+    text-align: center;
+    color: rgb(255, 251, 7);
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    bottom: 37px;
+    right: 398px;
+    background: transparent;
+}
+
+#coin {
+    width: 50px;
+    position: absolute;
+    left: 1385.3px;
+    bottom: 150px;
+}
+
+#money {
+    width: 50px;
+    position: absolute;
+    left: 1353.3px;
+    bottom: 80px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #f9a825;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(29, 28, 28);
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+#game_start {
+    display: block;
+    position: absolute;
+    width: 42%;
+    height: 57%;
+    top: 8px;
+    left: 876px;
+}
+
+#click_on_house_1 {
+    position: absolute;
+    height: 75px;
+    left: 81px;
+    top: 220px;
+    opacity: 0;
+}
+
+#click_on_house_2 {
+    position: absolute;
+    height: 61px;
+    width: 92px;
+    left: 240px;
+    top: 159px;
+    opacity: 0;
+}
+
+#click_on_house_3 {
+    position: absolute;
+    height: 75px;
+    width: 130px;
+    left: 612px;
+    top: 169px;
+    opacity: 0;
+}
+
+#click_on_house_4 {
+    position: absolute;
+    height: 88px;
+    left: 170px;
+    top: 453px;
+    opacity: 0;
+}
+
+#click_on_house_5 {
+    position: absolute;
+    height: 88px;
+    width: 102px;
+    left: 394px;
+    top: 394px;
+    opacity: 0;
+}
+
+#click_on_house_6 {
+    position: absolute;
+    height: 87px;
+    width: 128px;
+    left: 631px;
+    top: 498px;
+    opacity: 0;
+}
+
+.event_backgrounds {
+    display: none;
+    position: absolute;
+    width: 42.4%;
+    height: 55%;
+    left: 873px;
+}
+
+#bartender {
+    position: absolute;
+    height: 244px;
+    left: 1112px;
+    top: 181px;
+    background: transparent;
+    display: none;
+}
+
+#nurse {
+    position: absolute;
+    height: 204px;
+    left: 1085px;
+    top: 201px;
+    background: transparent;
+    display: none;
+}
+
+#wizard {
+    position: absolute;
+    height: 204px;
+    left: 1017px;
+    top: 201px;
+    background: transparent;
+    display: none;
+}
+
+#blacksmith {
+    position: absolute;
+    height: 204px;
+    left: 1089px;
+    top: 241px;
+    background: transparent;
+    display: none;
+}
+
+#cook {
+    position: absolute;
+    height: 204px;
+    left: 1056px;
+    top: 222px;
+    background: transparent;
+    display: none;
+}
+
+#store_sign_1 {
+    position: absolute;
+    height: 70px;
+    width: 100px;
+    top: 167px;
+    left: 69px;
+    background: transparent;
+}
+
+#store_sign_2 {
+    position: absolute;
+    height: 70px;
+    width: 82px;
+    top: 108px;
+    left: 245px;
+    background: transparent;
+}
+
+#store_sign_3 {
+    position: absolute;
+    height: 70px;
+    width: 152px;
+    top: 115px;
+    left: 602px;
+    background: transparent;
+}
+
+#store_sign_4 {
+    position: absolute;
+    height: 70px;
+    width: 133px;
+    top: 404px;
+    left: 150px;
+    background: transparent;
+}
+
+#store_sign_5 {
+    position: absolute;
+    height: 70px;
+    width: 200px;
+    top: 349px;
+    left: 349px;
+    background: transparent;
+}
+
+#store_sign_6 {
+    position: absolute;
+    height: 70px;
+    width: 180px;
+    top: 445px;
+    left: 605px;
+    background: transparent;
+}
+
+#dojo_name {
+    font-family: 'Reggae One', cursive;
+    font-size: 28px;
+    text-align: center;
+    color: black;
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    top: 139px;
+    left: 17px;
+    background: transparent;
+}
+
+#bar_name {
+    font-family: 'Reggae One', cursive;
+    font-size: 28px;
+    text-align: center;
+    color: black;
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    top: 80px;
+    left: 184px;
+    background: transparent;
+}
+
+#hospital_name {
+    font-family: 'Reggae One', cursive;
+    font-size: 28px;
+    text-align: center;
+    color: black;
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    top: 87px;
+    left: 577px;
+    background: transparent;
+}
+
+#library_name {
+    font-family: 'Reggae One', cursive;
+    font-size: 28px;
+    text-align: center;
+    color: black;
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    top: 376px;
+    left: 114px;
+    background: transparent;
+}
+
+#armor_shop_name {
+    font-family: 'Reggae One', cursive;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    top: 326px;
+    left: 346px;
+    background: transparent;
+}
+
+#restaurant_name {
+    font-family: 'Reggae One', cursive;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    top: 423px;
+    left: 591px;
+    background: transparent;
+}
+
+#inventory_chest {
+    overflow: auto;
+    position: absolute;
+    background-image: url("images/inventory.jpg");
+    width: 650px;
+    height: 397px;
+    padding: 10px;
+    left: 873px;
+    display: none;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 12px;
+    background: transparent;
+}
+
+.row {
+    background: transparent;
+    padding: 0 10px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.items{
+    background: transparent;
+    width: 80%;
+    height: 100px;
+}

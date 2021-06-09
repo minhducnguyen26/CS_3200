@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --sidebar-color: #3C737C;
+    --text-color: #F8FAEC;
+    --title-color: #221F24;
+    --hover-color: #ee6205;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+    width: 15%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--sidebar-color);
+}
+
+.sidebar_menu li {
+    width: 100%;
+    padding: 1em 0 1em 2rem;
+}
+
+.sidebar_menu li:hover {
+    cursor: pointer;
+    background: var(--hover-color);
+}
+
+.sidebar_menu li img {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.sidebar_options {
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sidebar_icon {
+    color: var(--text-color);
+    font-size: 25px;
+    margin: 0 10px 0 5px;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin: 1%;
+    margin-left: 16%;
+    max-height: 95vh;
+}
+
+.grid_item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.items_table {
+    margin-right: 0.7%;
+    overflow: auto;
+    height: 96vh;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+}
+
+th {
+    border-right: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    max-width: 40px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    color: var(--text-color);
+    background: var(--title-color);
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.names {
+    max-width: 150px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.actions {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    margin-left: 2%;
+}
+
+.action_name {
+    color: var(--text-color);
+    background: var(--title-color);
+    padding: 4px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.input_new_items {
+    margin: 30px 0 0 34px;
+    text-align: left;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+.title_1 {
+    margin-right: 44px;
+}
+
+.title_2 {
+    margin-right: 20px;
+}
+
+.title_3 {
+    margin-right: 56px;
+}
+
+.title_4 {
+    margin-right: 40px;
+}
+
+.title_4_add_items {
+    margin-right: 39px;
+}
+
+input {
+    font-size: 21px;
+    width: 69%;
+}
+
+.save_new_items, .save_new_edit, .open_edit_box  {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    color: var(--text-color);
+    background: var(--sidebar-color);
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    margin: 9% auto;
+}
+
+.save_new_items:hover, .save_new_edit:hover, .open_edit_box:hover {
+    cursor: pointer;
+    background: var(--hover-color);
+}
+
+.grid_rows {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.table_icons{
+    font-size: 25px;
+    text-align: center;
+    padding: 1px;
+}
+
+.table_icons:hover {
+    cursor: pointer;
+}
+
+.action_name:hover {
+    cursor: pointer;
+}
+
+#view_item, #edit_item {
+    display: none;
+}
+
+.image_in_edit_item, .image_in_view_item {
+    width: 250px;
+    height: 150px;
+    margin: 10% auto 6% auto;
+}
+
+#items {
+    background: white;
+}
+
+#items .sidebar_options, #items .sidebar_icon {
+    color: var(--title-color);
+}
+
+.close_button {
+    margin-left: 85%;
+    margin-top: -8.7%;
+    font-size: 26px;
+}
+
+.price_column {
+    text-align: center;
+    padding: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 155px;
+}
+
+.modal_content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 40%;
+    height: 51%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: var(--title-color);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.x_close {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.section_header {
+    font-family:  arial, sans-serif;
+    font-weight: normal;
+    color: var(--sidebar-color);
+    text-align: center;
+    font-size: 2.5em;
+    border-bottom: 1px solid;
+    padding: 0;
+}
+
+.confirmation_text {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+
+.confirmation_name {
+    font-size: 25px;
+    text-align: center;
+}
+
+.buttons_div {
+    text-align: center;
+    margin-top: 35px;
+    padding: 0 30%;
+}
+
+.confirm_buttons {
+    width: 70px;
+    height: 45px;
+    font-size: 22px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.confirm_buttons:hover {
+    cursor: pointer;
+}
+
+.confirm_yes {
+    float: left;
+    background: rgb(212, 35, 35);
+}
+
+.confirm_no {
+    float: right;
+    background: rgb(51, 156, 51);
+}
+
+.post_confirmation {
+    display: none;
+}
+
+.post_confirmation_name {
+    font-size: 35px;
+    margin: 7% auto 2%;
+    text-align: center;
+}
+
+.post_confirmation_text {
+    font-size: 30px;
+    text-align: center;
+}
+
+#add_item_main {
+    padding-bottom: 5px;
+}
+
+.view_item_text {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 1600px) {
+    .actions {
+        grid-template-rows: 95.5% auto;
+    }
+
+    .input_new_items {
+        margin: 30px 0 0 50px;
+    }
+
+    .image_in_edit_item {
+        width: 300px;
+        height: 200px;
+        margin: 10% auto 3% auto;
+    }
+
+    .section_header {
+        padding: 10px;
+    }
+
+    .modal {
+        padding-top: 250px;
+    }
+
+    .modal_content {
+        height: 55%;
+    }
+
+    .close_button {
+        margin-top: -6.7%;
+    }
+    
+    .confirmation_text {
+        font-size: 25px;
+        margin: 25px 0 15px 0;
+    }   
+
+    .confirmation_name {
+        font-size: 30px;
+    }
+
+    .buttons_div {
+        margin-top: 40px;
+    }
+
+    .confirm_buttons {
+        width: 80px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    #add_item_main {
+        padding-bottom: 7px;
+    }
+}
