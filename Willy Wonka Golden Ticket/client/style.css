@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main_container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 1%;
+}
+
+.view_tickets {
+    margin-right: 15px;
+}
+
+.add_ticket_title, .view_tickets_title {
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    padding: 10px;
+}
+
+.form {
+    border: 1px solid black;
+    padding: 10% 5% 5%;
+    height: 88.6vh;
+}
+
+.inputs_for_new_ticket {
+    margin-bottom: 10%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+}
+
+.inputs_for_new_ticket > span {
+    font-size: 22px;
+}
+
+.inputs_for_new_ticket > input {
+    font-size: 22px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.form > button {
+    background: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 39%;
+    margin-top: 2%;
+}
+
+:root {
+    --background: #000;
+    --color1: #d25778;
+    --color2: #ec585c;
+    --color3: #e7d155;
+    --color4: #56a8c6;
+}
+  
+.ticket {
+    width: 88%;
+    margin: 20px;
+    height: 25vh;
+    position: relative;
+    transition: all 300ms cubic-bezier(0.03, 0.98, 0.53, 0.99) 0s;
+    background: linear-gradient(
+        to right,
+        var(--color1),
+        var(--color2),
+        var(--color3),
+        var(--color4)
+    );
+    border-radius: 20px;
+    padding: 5px;
+}
+  
+.ticket:before, .ticket:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 31%;
+    width: 58px;
+    height: 55px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: white;
+}
+  
+.ticket:before {
+    border: 5px solid var(--color1);
+    left: -35px;
+    clip-path: circle(65% at 100% 50%);
+}
+  
+.ticket:after {
+    border: 5px solid var(--color4);
+    right: -35px;
+    clip-path: circle(65% at 0 50%);
+}
+
+.ticket_content_wrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+    background: rgb(249 247 192);
+}
+  
+.head {
+    padding: 32px 0 23px 50px;
+    border-right: 2px solid var(--color4);
+} 
+
+.info_on_ticket {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 10px;
+}
+
+.info_on_ticket > .title {
+    font-size: 20px;
+}
+
+.info_on_ticket > .info {
+    font-size: 17px;
+    margin-top: 2px;
+}
+
+.tail {
+    padding: 78px 0px 30px 3px;
+    font-size: 27px;
+    transform: rotate(90deg);
+}
+
+.tickets_list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-height: 88.7vh;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.ticket.winner:before, .ticket.winner:after {
+    border: 5px solid black;
+}
