@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Fortune Teller | Dr. Strange</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Fortune Teller Web App">
+	<meta name="author" content="Minh Nguyen">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+</head>
+
+<body>
+    <div class="left">My name is Dr. Strange.</div>
+    <div class="left line2">Ask me a question.</div>
+    <div class="left line3">Your question:</div>
+    <div class="left">
+        <input class="clickable" id="user_input" type="text" size="50px" required> 
+        <br>
+        <input class="clickable" id="button" type="button" value="Ask">
+        <br>
+        <input class="clickable" id="view_history" type="button" value="History">
+    </div>
+
+    <div class="input_required">
+        <img class="flip" src="images/bubble_speech.png">
+        <div class="alert">Please enter your question.</div>
+    </div>
+    
+    <div class="bubble_speech">
+        <img class="flip" src="images/bubble_speech.png">
+    </div>
+
+    <div class="rotating_images">
+        <img class="magic rotate magic1" src="images/magic1.png">
+        <img class="magic rotate magic2" src="images/magic2.png">
+        <img class="magic rotate magic3" src="images/magic3.png">
+        <img class="magic rotate magic4" src="images/magic4.png">
+    </div>
+
+    <section id="pop_up_list" class="modal">
+        <div class="modal_content">
+            <div class="x_close">
+                <span class="close" title="Close">&times;</span>
+            </div>
+            <h2 class="section_header">Previous Questions and Answers</h2>
+            <ul id="history"></ul>
+        </div>
+    </section>
+    
+    <div class="still_images">
+        <img class="magic_options clickable" id="option1" src="images/magic2.png">
+        <img class="magic_options clickable" id="option2" src="images/magic3.png">
+        <img class="magic_options clickable" id="option3" src="images/magic4.png">
+        <img class="magic_options clickable" id="option4" src="images/magic1.png">
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
