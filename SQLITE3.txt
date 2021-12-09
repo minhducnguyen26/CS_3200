@@ -1,0 +1,21 @@
+sqlite3 bakery.db
+
+CREATE TABLE pies (id INTEGER PRIMARY KEY, flavor TEXT, size TEXT, color TEXT, crust TEXT);
+
+# check if everything is correct
+.schema
+
+# create columns, everything BUT id and give values to those columns
+INSERT INTO pies (flavor, size, color, crust) VALUES ("Strawberry", "Large", "Red", "Graham Cracker");
+
+# see all columns
+SELECT * FROM pies;
+
+# insert another pie
+INSERT INTO pies (flavor, size, color, crust) VALUES ("Key Lime", "Medium", "Lime Green", "Graham Cracker");
+
+# to see columns' name
+.headers on
+
+# to get out of SQLITE3
+.quit
